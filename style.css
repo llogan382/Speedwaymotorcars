@@ -467,6 +467,8 @@ html {
 body {
 	font-family: 'Cabin', sans-serif;
 	color:#4f5e62;
+	background-color: #f0f3f5!important;
+
 	font-size:14px;
 	line-height:1.6em;
 	/* Fallback for when there is no custom background color defined. */
@@ -949,4 +951,11 @@ object {
     text-decoration: none;
 	background-color: #4f5e62!important;
 	color: #34a4d8!important;
+}
+.lwd-container {
+	background-color: #fff;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-bottom: 3px solid #ced6db;
+    background: #fff;
+    margin-bottom: 40px;
 }

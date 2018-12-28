@@ -28,7 +28,18 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
+<div class="container">
+	<div class="row">
+			<div class="col">
 
+			</div>
+			<div class="col">
+
+			</div>
+	</div>
+
+
+</div>
 	<?php speedwaymotorcars_post_thumbnail(); ?>
 
 	<div class="entry-content">
