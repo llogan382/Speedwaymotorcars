@@ -44,7 +44,9 @@ if ( ! function_exists( 'speedwaymotorcars_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'speedwaymotorcars' ),
+			'secondary' => esc_html__( 'Secondary', 'speedwaymotorcars' ),
+			'primary' => esc_html__( 'Primary', 'speedwaymotorcars' ),
+
 		) );
 
 		/*
@@ -161,6 +163,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 // Register Custom Post Type
 function lwd_speedway_vehicles_cpt() {
 
