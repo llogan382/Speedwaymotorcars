@@ -121,6 +121,8 @@ add_action( 'widgets_init', 'speedwaymotorcars_widgets_init' );
  */
 function speedwaymotorcars_scripts() {
 	wp_enqueue_style( 'speedwaymotorcars-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrap-min-css', get_stylesheet_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_script( 'bootstrap-min-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'speedwaymotorcars-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
