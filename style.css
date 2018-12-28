@@ -465,7 +465,10 @@ html {
 }
 
 body {
-	background: #fff;
+	font-family: 'Cabin', sans-serif;
+	color:#4f5e62;
+	font-size:14px;
+	line-height:1.6em;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -895,4 +898,55 @@ object {
 
 .header-logo {
 	width: 50%;
+}
+
+.lwd-nav{
+	background: rgba(174, 174, 174, 0.8);
+	z-index: 999;
+
+}
+
+.lwd-menu-ul {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	display: block;
+    height: 20px;
+    text-decoration: none;
+	line-height: 18px;
+    z-index: 1300;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    float: right;
+    text-shadow: 0 1px 1px #000;
+}
+
+.lwd-menu-ul > li > a {
+    color: #ccc!important;
+}
+.menu-item > a {
+	color: #ccc!important;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	display: block;
+    height: 20px;
+    text-decoration: none;
+	line-height: 18px;
+    z-index: 1300;
+
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    float: right;
+    text-shadow: 0 1px 1px #000;
+}
+.dropdown-menu {
+	color: #4f5e62;
+	background-color: #4f5e62!important;
+}
+.dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+	background-color: #4f5e62!important;
+	color: #34a4d8!important;
 }
