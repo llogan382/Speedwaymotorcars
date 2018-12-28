@@ -14,10 +14,14 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php speedwaymotorcars_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php
+
+	</div><!-- .entry-content -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+			<?php
 		the_content();
 
 		wp_link_pages( array(
@@ -25,7 +29,24 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+			</div>
+
+			<div class="col">
+			<?php
+		the_content();
+
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'speedwaymotorcars' ),
+			'after'  => '</div>',
+		) );
+		?>
+			</div>
+
+		</div>
+
+
+
+	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

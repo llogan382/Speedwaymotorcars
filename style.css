@@ -476,23 +476,6 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
 
 dt {
 	font-weight: bold;
@@ -505,7 +488,7 @@ dd {
 img {
 	height: auto;
 	/* Make sure images are scaled correctly. */
-	/* max-width: 100%; */
+	max-width: 90%;
 	/* Adhere to container width. */
 }
 
@@ -632,70 +615,17 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		/* display: block; */
 	}
 }
 
@@ -955,25 +885,14 @@ object {
 .gallery-caption {
 	display: block;
 }
-.site-branding {
-	width: 30em;
-	color: rgb(79, 94, 98);
-	display: flex;
-}
 
 
-.main-navigation ul {
-	display: flex;
-    justify-content: flex-end;
-}
+
+
 #masthead {
 	height: 90px;
 }
 
 .header-logo {
 	width: 50%;
-}
-
-p {
-	background: #000;
 }
