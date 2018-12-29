@@ -959,3 +959,54 @@ object {
     background: #fff;
     margin-bottom: 40px;
 }
+.vehicle-title {
+	font-size: 15px;
+	color: #39b4ed;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	
+	border-bottom: 0.5px solid rgb(233, 233, 233);
+}
+.vehicle-title > a{
+	color: #39b4ed;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f25821!important;
+	text-decoration: none!important;
+}
+.post-thumbnail > img {
+	border-right: 4px solid rgb(242, 86, 32);
+}
+.vehicle-price {
+	color: #f25821!important;
+
+}
+.lwd-title-single {
+	font-size: 24px;
+    text-transform: uppercase;
+    color: #3f4b56;
+    margin: 0;
+    line-height: 1em;
+    text-shadow: 0 1px 1px #fff;
+    font-weight: normal;
+}
+.single-price {
+	font-size: 29px;
+    color: #f1541e;
+}
+.spec_value {
+font-family: Cabin, sans-serif;
+font-size: 13px;
+font-stretch: 100%;
+}
+.spec_name {
+	color: #3fb6ed;
+	float: right;
+	font-size: 100%;
+	font-weight: bold;
+}
+.single-features > li {
+	list-style-type: none;
+}
