@@ -146,6 +146,16 @@ wp_enqueue_style( 'style', get_stylesheet_uri(), false, '1.0.0' );
 }
 add_action('wp_enqueue_scripts', 'speedwayscript');
 
+add_action( 'wp_enqueue_scripts', 'ls_scripts_styles', 20 );
+/**
+ * LightSlider Scripts
+ */
+function ls_scripts_styles() {
+	wp_enqueue_style( 'lightslidercss', get_stylesheet_directory_uri(). '/css/lightslider.css' , array(), '1.0.0', 'all' );
+	wp_enqueue_script( 'lightsliderjs', get_stylesheet_directory_uri() . '/js/lightslider.min.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'lightsliderinit', get_stylesheet_directory_uri() . '/js/lightslider-init.js', array( 'lightsliderjs' ), '1.0.0', true );
+}
+
 
 /**
  * Custom template tags for this theme.
@@ -393,11 +403,11 @@ function lwd_interior_features() {
 	$rewrite = array(
 		'slug'                       => 'Interior_Features',
 		'with_front'                 => true,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
@@ -439,11 +449,11 @@ function lwd_exterior_features() {
 	$rewrite = array(
 		'slug'                       => 'exterior_Features',
 		'with_front'                 => true,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,

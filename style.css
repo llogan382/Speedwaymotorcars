@@ -956,7 +956,7 @@ object {
 	background-color: #fff;
 	-webkit-border-radius: 0 0 3px 3px;
 	border-bottom: 3px solid #ced6db;
-    background: #fff;
+	background: #fff;
     margin-bottom: 40px;
 }
 .vehicle-title {
@@ -976,7 +976,7 @@ a:hover {
 	color: #f25821!important;
 	text-decoration: none!important;
 }
-.post-thumbnail > img {
+.lslide:active{
 	border-right: 4px solid rgb(242, 86, 32);
 }
 .vehicle-price {
@@ -1000,13 +1000,33 @@ a:hover {
 font-family: Cabin, sans-serif;
 font-size: 13px;
 font-stretch: 100%;
+padding-left: 5px;
 }
 .spec_name {
 	color: #3fb6ed;
 	float: right;
 	font-size: 100%;
+	padding-right: 8px;
 	font-weight: bold;
+}
+.single-features {
+	width: -webkit-fill-available;
 }
 .single-features > li {
 	list-style-type: none;
+	padding: 3px;
+}
+
+.lwd-container-tax {
+	background-color: #f0f3f5;
+}
+.nav-tabs .nav-link:hover {
+	background: #62c1ed!important;
+}
+
+.nav-fill .nav-item {
+	color: #3f4b56;
+}
+#primary {
+	margin-top: 8em;
 }
