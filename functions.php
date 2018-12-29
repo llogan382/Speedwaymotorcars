@@ -45,6 +45,8 @@ if ( ! function_exists( 'speedwaymotorcars_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'Speedwaymotorcars' ),
+			'search' => esc_html__( 'Search Bar', 'Speedwaymotorcars' ),
+
 		) );
 
 		/*
@@ -220,8 +222,8 @@ function lwd_speedway_vehicles_cpt() {
 		'description'           => __( 'Vehicles', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes' ),
-		'taxonomies'            => array( 'vehicle_type', ' makers_models', '' ),
-		'hierarchical'          => false,
+		'taxonomies'            => array( 'vehicle_type', 'makers_models'),
+		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
@@ -283,51 +285,6 @@ function vehicle_type() {
 }
 add_action( 'init', 'vehicle_type', 0 );
 
-// Register Custom Taxonomy
-function makers_models() {
-
-	$labels = array(
-		'name'                       => _x( 'Vehicle Makers/Models', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Vehicle Makers/Models', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Makers/Models', 'text_domain' ),
-		'all_items'                  => __( 'All Makers/Models', 'text_domain' ),
-		'parent_item'                => __( 'Parent Makers/Models', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Maker/Model:', 'text_domain' ),
-		'new_item_name'              => __( 'New Type Makers/Models', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Makers/Models', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Makers/Models', 'text_domain' ),
-		'update_item'                => __( 'Update Makers/Models', 'text_domain' ),
-		'view_item'                  => __( 'View Makers/Models', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate Makers/Models with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove Makers/Models', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Makers/Models', 'text_domain' ),
-		'search_items'               => __( 'Search Makers/Models', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No Makers/Models', 'text_domain' ),
-		'items_list'                 => __( 'Makers/Models list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Makers/Models list navigation', 'text_domain' ),
-	);
-	$rewrite = array(
-		'slug'                       => 'makers',
-		'with_front'                 => true,
-		'hierarchical'               => true,
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-		'rewrite'                    => $rewrite,
-		'show_in_rest'               => true,
-	);
-	register_taxonomy( 'makers_models', array( 'lwd_speedway_vehicle' ), $args );
-
-}
-add_action( 'init', 'makers_models', 0 );
 
 // Register Custom Taxonomy
 function lwd_vehicle_colors() {
@@ -355,7 +312,7 @@ function lwd_vehicle_colors() {
 		'items_list_navigation'      => __( 'Colors list navigation', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                       => 'makers',
+		'slug'                       => 'colors',
 		'with_front'                 => true,
 		'hierarchical'               => true,
 	);
@@ -604,3 +561,50 @@ function lwd_vehicle_transmission() {
 
 }
 add_action( 'init', 'lwd_vehicle_transmission', 0 );
+
+
+// Register Custom Taxonomy
+function makers_models() {
+
+	$labels = array(
+		'name'                       => _x( 'Vehicle Makers/Models', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Vehicle Makers/Models', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Makers/Models', 'text_domain' ),
+		'all_items'                  => __( 'All Makers/Models', 'text_domain' ),
+		'parent_item'                => __( 'Parent Makers/Models', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Maker/Model:', 'text_domain' ),
+		'new_item_name'              => __( 'New Type Makers/Models', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Makers/Models', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Makers/Models', 'text_domain' ),
+		'update_item'                => __( 'Update Makers/Models', 'text_domain' ),
+		'view_item'                  => __( 'View Makers/Models', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Makers/Models with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Makers/Models', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Makers/Models', 'text_domain' ),
+		'search_items'               => __( 'Search Makers/Models', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No Makers/Models', 'text_domain' ),
+		'items_list'                 => __( 'Makers/Models list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Makers/Models list navigation', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'makers',
+		'with_front'                 => true,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => 'hierarchical',
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'makers_models', array( 'lwd_speedway_vehicle' ), $args );
+
+}
+add_action( 'init', 'makers_models', 0 );

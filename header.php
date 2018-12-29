@@ -48,3 +48,26 @@
   </div>
 </nav>
 <?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
+
+<form role="search" method="get" id="searchform" class="searchform" >
+  <div class="row pr-4">
+    <div class="col-2">
+	  <input type="text" class="form-control" placeholder="Make">
+	  <input type="hidden" value="makers_models"/>
+	  <label class="screen-reader-text" for="s">Search for:</label>
+		<input type="text" value="" name="s"/>
+
+
+    </div>
+    <div class="col-2">
+      <input type="text" class="form-control" placeholder="Model">
+	</div>
+	<div class="col-2">
+      <input type="text" class="form-control" placeholder="Year">
+	</div>
+	<div class="col-2">
+      <input type="text" class="form-control" placeholder="Price">
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
